@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Mural de Publicações</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Meu Mural de Publicações</h1>
+        <p>Este mural exibe publicações de uma API pública. Clique no botão para carregar as publicações e use o campo de busca para filtrar por título.</p>
+    </header>
+    <main>
+        <button id="btn-carregar" type="button">Carregar publicações</button>
+        <input id="filtro" type="search" placeholder="Filtrar pelo título" />
+        <p id="mensagem" role="status"></p>
+        <section id="lista-posts" aria-label="Publicações"></section>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#btn-carregar {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #9900ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#btn-carregar:hover:not(:disabled) {
+    background-color: #7d00d1;
+}
+
+#btn-carregar:focus-visible {
+    outline: 3px solid #0056b3;
+}
+
+#btn-carregar:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+#filtro {
+    padding: 10px 16px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+#filtro:focus-visible {
+    outline: 3px solid #9900ff;
+    border-color: #9900ff;
+}
+
+#mensagem {
+    font-size: 16px;
+    margin-bottom: 20px;
+    min-height: 24px;
+}
+
+#mensagem.carregando {
+    color: #007bff;
+}
+
+#mensagem.erro {
+    color: #dc3545;
+}
+
+#mensagem.sucesso {
+    color: #28a745;
+}
+
+#lista-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.cartao {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.cartao h2 {
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.cartao p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+    margin: 0 0 10px 0;
+}
+
+.cartao .id-post {
+    font-size: 12px;
+    color: #888;
+    font-weight: bold;
+}
+
+.nenhum-resultado {
+    text-align: center;
+    grid-column: 1 / -1;
+    color: #666;
+    font-size: 16px;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    #btn-carregar {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #filtro {
+        width: 100%;
+    }
+
+    #lista-posts {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .cartao {
+        padding: 14px;
+    }
+}
